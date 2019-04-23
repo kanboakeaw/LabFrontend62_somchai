@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "LabFrontend62": {
+    "LabFrontend": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/LabFrontend62",
+            "outputPath": "dist/LabFrontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"            ],
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/popper.js/dist/umd/popper.min.js",
@@ -52,6 +53,8 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
                 {
                   "type": "initial",
                   "maximumWarning": "2mb",
@@ -64,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "LabFrontend62:build"
+            "browserTarget": "LabFrontend:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "LabFrontend62:build:production"
+              "browserTarget": "LabFrontend:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "LabFrontend62:build"
+            "browserTarget": "LabFrontend:build"
           }
         },
         "test": {
@@ -109,7 +112,7 @@
         }
       }
     },
-    "LabFrontend62-e2e": {
+    "LabFrontend-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -118,11 +121,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "LabFrontend62:serve"
+            "devServerTarget": "LabFrontend:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "LabFrontend62:serve:production"
+              "devServerTarget": "LabFrontend:serve:production"
             }
           }
         },
@@ -138,5 +141,5 @@
       }
     }
   },
-  "defaultProject": "LabFrontend62"
+  "defaultProject": "LabFrontend"
 }
